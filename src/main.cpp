@@ -1,9 +1,7 @@
 
-// Step 3: Create "main.cpp"
-// - Include <iostream> and "GroceryList.h"
-// - Create a GroceryList object
-// - Add a few items
-// - Show the list
-// - Remove an item
-// - Show the list again
-// - Try to remove an invalid index to trigger the error
+// main.cpp flow:
+// - Start by creating an instance of the collection you'll be working with.
+// - Add a few pieces of data so you have something to experiment on.
+// - Display everything so you confirm what is stored before making changes.
+// - Try removing something that should exist and observe the updated result.
+// - Then try removing something that clearly should NOT exist so you can see how your error handling behaves.
