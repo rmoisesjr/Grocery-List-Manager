@@ -22,13 +22,13 @@ void showList(){
 
 void removeItem(int index)
 {
-    // Remove an item from the vector using the user provided index.
-    // Ensure the index is valid (within bounds of the vector).
+    // Removed an item from the vector using the user provided index.
+    // Ensured the index is valid (within bounds of the vector).
     if (index >= 0 && index < fruit_list.size())
     {
-        // Get an iterator pointing to the element at the specified index.
+        // gott an iterator pointing to the element at the specified index.
         auto current = fruit_list.begin() + index;
-        // Erase the element at the iterator position.
+        // Erased the element at the iterator position.
         fruit_list.erase(current);
     }
 }
