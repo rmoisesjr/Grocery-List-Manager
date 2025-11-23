@@ -8,19 +8,29 @@
 //declaring the vectors from the GroceryList class.
 //and adding values to the vectors
 
-std::vector<std::string> fruit_list = {"apple, banana, pear, strawberry"};
-std::vector<std::string> vegetable_list = {"brocoli, tomato, carrot, potato "};
-
+std::vector<std::string> fruit_list = {"apple", "banana", "pear", "strawberry"};
+std::vector<std::string> vegetable_list = {"brocoli", " tomato", "carrot", "potato"};
 
 // we are going to code the functions of showlist.
 void showList(){
-    for (std::string fruit : fruit_list){
-
+    //it's more efficient to use the & when taking out each string from the vector
+    //list it saves memeory and its more faster for future bigger output 
+    for (std::string& fruits : fruit_list){
+        std::cout << fruits  << " ";
     }
 }
 
-void removeItem(int index){
-
+void removeItem(int index)
+{
+    // Remove an item from the vector using the user provided index.
+    // Ensure the index is valid (within bounds of the vector).
+    if (index >= 0 && index < fruit_list.size())
+    {
+        // Get an iterator pointing to the element at the specified index.
+        auto current = fruit_list.begin() + index;
+        // Erase the element at the iterator position.
+        fruit_list.erase(current);
+    }
 }
 
 // addItem:
