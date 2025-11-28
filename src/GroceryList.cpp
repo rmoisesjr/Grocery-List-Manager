@@ -26,26 +26,27 @@ void removeItem(int index)
     // Ensured the index is valid (within bounds of the vector).
     if (index >= 0 && index < fruit_list.size())
     {
-        // gott an iterator pointing to the element at the specified index.
+        // got an iterator pointing to the element at the specified index.
         auto current = fruit_list.begin() + index;
-        // Erased the element at the iterator position.
+        // Erase the element at the iterator position.
         fruit_list.erase(current);
     }
 }
 
-// addItem:
-// - Think about what should happen when a structure has a limit and you're asked to put one more thing into it.
-// - Consider how you would check that limit before accepting the new thing.
-// - If the limit is reached, think about which output stream is meant for problems rather than normal messages.
-// - If there is room, figure out which operation grows the structure by adding the new element.
+void addItem(const std::string& item)
+ {
+   int max_size = 6;
+//checks if the list is already full.
+   if (fruit_list.size() >= max_size){
+//If it's full, print an error message.
+     std::cerr << "List is full.\n";
+     }else{
+// - If it's not full, add the new item a (new fruit) to the list.
+    fruit_list.push_back(item);
+     }
+}
 
 // showList:
 // - Imagine you need to move through each element of a structure one by one.
 // - What tool lets you "walk" through a container without using plain indexes?
 // - As you walk through it, think about how to show each element to the user using the standard output stream.
-
-// removeItem:
-// - Picture what happens when someone asks for a position in a structure that might not exist.
-// - Think about which access method will complain loudly when you try an invalid position so you can react properly.
-// - If the position is real, consider how you would remove the element at that spot using the structure's own tools.
-// - If the position is not real, think about how you'd catch that failure and report it using the error stream.

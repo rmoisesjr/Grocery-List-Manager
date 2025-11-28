@@ -16,9 +16,10 @@
 class GroceryList {
     public:
     void showList() const;
-//use a function and it's parameter as a placeholder for future input.
-//it behaves like a local variable.
+//Use a function and it's parameter as a placeholder for future input.
+//It will behave like a local variable.
     void removeItem(int index);
+    void addItem(const std::string& item);
 // we will move the list of the fruits and vegetable in a more secure area
 // called (private: )so it can not be modified by other parts of the program.
     private:
